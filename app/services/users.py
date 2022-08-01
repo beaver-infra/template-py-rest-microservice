@@ -1,4 +1,7 @@
 class ProfileModel():
+  """
+  Defined response model for the users service
+  """
   def __init__(self, *args, **kwargs):
     pass
 

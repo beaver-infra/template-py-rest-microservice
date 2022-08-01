@@ -10,6 +10,6 @@ Here are the list of default features which comes with the default template
 - [x] Predefined `project scaffolding` like files and directories, event handlings, routers, middlewares etc.
 - [x] Comes with `default configurations` for hostname, port, environment etc. Each of these configuration can be `customize` as per microservice needs.
 - [x] Predefined common application `logger` for logging.
-- [x] Comes with build in `health check API`.
+- [x] Preconfigured special routes `/info` and `/health`.
 - [x] Use `Docker` to make it easy to run the app on container and shift it.
-- [x] Predefined `GitHub Actions` for workflows, CI, CD etc.
+- [x] Predefined `GitHub Actions` for workflows for `PyLint`, `Python-Package`, `CodeQL`, and `Label`.

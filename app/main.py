@@ -1,11 +1,24 @@
 import uvicorn
+import logging
 from fastapi import FastAPI
 from fastapi_versioning import VersionedFastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from routers.router import api_router
-from core.eventHandlers import (start_app_handler, shutdown_app_handler)
+# from core.eventHandlers import (start_app_handler, shutdown_app_handler)
 from config import Settings
+
+"""
+Setup logger configuration
+"""
+logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
+
+# get root logger
+"""
+Get root logger. The __name__ resolve to "main" since we are at the root of the project.
+This will get the root logger since no logger in the configuration has this name.
+"""
+logger = logging.getLogger(__name__)
 
 def get_app() -> FastAPI:
   """
@@ -48,16 +61,27 @@ def get_app() -> FastAPI:
   """
   Configure common event handlers for service startup and shutdown to handler special use cases
   """
-  fast_app.add_event_handler("startup", start_app_handler(fast_app))
-  fast_app.add_event_handler("shutdown", shutdown_app_handler(fast_app))
+  # fast_app.add_event_handler("startup", start_app_handler(fast_app))
+  # fast_app.add_event_handler("shutdown", shutdown_app_handler(fast_app))
 
   return fast_app
 
 app = get_app()
 
+# @app.on_event("startup")
+# async def startup_event():
+#   print(">>>> startup")
+#   pass
+
+# @app.on_event("shutdown")
+# async def shutdown_event():
+#   print(">>>> shutdown")
+#   pass
+
 if __name__ == "__main__":
   try:
     settings = Settings()
+    logger.info("logging from the root logger")
     uvicorn.run(
       "main:app",
       host=settings.get_hostname(),

@@ -22,10 +22,14 @@ List of features that comes with default template
 python install -r requirements.txt
 ```
 
-Run on local/dev env
+## Run the app
+
+On local/dev env
 ```console
 python app/main.py
 ```
+
+## API Responses
 
 Open browser or postman and type below APIs to see the response
 ```console

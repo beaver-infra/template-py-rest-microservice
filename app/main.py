@@ -7,9 +7,6 @@ from routers.router import api_router
 from core.eventHandlers import (start_app_handler, shutdown_app_handler)
 from config import Settings
 
-"""
-Create FastAPI app and return with default configured FastAPI instance.
-"""
 def get_app() -> FastAPI:
   # Create FastAPI instance
   """
@@ -43,7 +40,7 @@ def get_app() -> FastAPI:
   Reference to all the microservice routes including special routes like info and health
   """
   fast_app.include_router(api_router)
-
+  
   """
   Configure API versioning by setting prefix format for all APIs
   """

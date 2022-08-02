@@ -7,13 +7,13 @@ class Settings(BaseSettings):
   app_name: str = "Beaver Server"
   microservice_name: str = "users"
 
-  def get_hostname():
+  def get_hostname(self):
     """
     Return machine hostname
     """
     return "127.0.0.1"
 
-  def get_port():
+  def get_port(self):
     """
     Return application server port. This should be unique amoung all the microservice exist for beaver.
     """

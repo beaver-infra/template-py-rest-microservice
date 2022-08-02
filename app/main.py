@@ -8,7 +8,6 @@ from core.eventHandlers import (start_app_handler, shutdown_app_handler)
 from config import Settings
 
 def get_app() -> FastAPI:
-  # Create FastAPI instance
   """
   Create FastAPI app instance and return with default configured settings
   debug=True is set for dev and stage env whereas debug=False is set for production env

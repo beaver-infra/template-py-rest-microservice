@@ -3,7 +3,7 @@ from fastapi_versioning import version
 
 router = APIRouter()
 
-def get_session():
+async def get_session():
   """
   Return a mock boolean response
   """

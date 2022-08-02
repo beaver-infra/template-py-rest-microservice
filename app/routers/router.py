@@ -1,4 +1,3 @@
-from email import header
 from fastapi import APIRouter
 from routers import info, health, users
 

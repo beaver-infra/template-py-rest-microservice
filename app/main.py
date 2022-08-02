@@ -20,14 +20,17 @@ This will get the root logger since no logger in the configuration has this name
 """
 logger = logging.getLogger(__name__)
 
+setting = Settings()
+
 def get_app() -> FastAPI:
   """
   Create FastAPI app instance and return with default configured settings
-  debug=True is set for dev and stage env whereas debug=False is set for production env
   """
-  debugMode = True
   fast_app = FastAPI(
-    debug=debugMode
+    title=setting.title,
+    description=setting.description,
+    contact=setting.contact,
+    debug=setting.is_debug_mode(),
   )
 
   """
@@ -80,12 +83,10 @@ app = get_app()
 
 if __name__ == "__main__":
   try:
-    settings = Settings()
-    logger.info("logging from the root logger")
     uvicorn.run(
       "main:app",
-      host=settings.get_hostname(),
-      port=settings.get_port(),
+      host=setting.get_hostname(),
+      port=setting.get_port(),
       reload=True
     )
   except Exception as e:

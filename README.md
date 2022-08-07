@@ -6,11 +6,16 @@
 
 The repository is a `project template` for REST microservice built using FastAPI (Python). The latest version supports Python 3.8 and above.
 
+## Prerequisite
+
+* Python 3.8 or above.
+
 ## Features
 
 List of features that comes with default template
 
-- [x] Use `FastAPI` as base framework to build the `REST` microservice.
+- [x] Use [FastAPI](https://fastapi.tiangolo.com/) as base framework to build the `REST` microservice.
+- [x] Use [Poetry](https://python-poetry.org/docs/) as a tool for dependency management and packaging in Python.
 - [x] Predefined `project scaffolding` like files and directories, event handlings, routers, middlewares etc.
 - [x] Comes with `default configurations` for hostname, port, environment etc. Each of these configuration can be `customize` as per microservice needs.
 - [x] Predefined common `logger` for application logging.
@@ -21,7 +26,7 @@ List of features that comes with default template
 ## Install
 
 ```console
-python install -r requirements.txt
+poetry install --no-root
 ```
 
 ## Run the app

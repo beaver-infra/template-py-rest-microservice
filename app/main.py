@@ -71,15 +71,20 @@ def get_app() -> FastAPI:
 
 app = get_app()
 
-# @app.on_event("startup")
-# async def startup_event():
-#   print(">>>> startup")
-#   pass
+"""
+A function that should be run before the application starts.
+Your application won't start receiving requests until all the startup event handlers have completed.
+"""
+@app.on_event("startup")
+async def startup_event():
+  pass
 
-# @app.on_event("shutdown")
-# async def shutdown_event():
-#   print(">>>> shutdown")
-#   pass
+"""
+A function that should be run when the application is shutting down.
+"""
+@app.on_event("shutdown")
+async def shutdown_event():
+  pass
 
 if __name__ == "__main__":
   try:

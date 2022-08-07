@@ -3,6 +3,12 @@ name = "template-py-rest-microservice"
 version = "1.0.0"
 description = "This repository acts like a project template for all Python based microservice built using FastAPI."
 authors = ["Ashwin Hegde <ashwin.hegde3@gmail.com>"]
+maintainers = ["Ashwin Hegde <ashwin.hegde3@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/beaver-ai/template-py-rest-microservice"
+documentation = "https://github.com/beaver-ai"
+keywords = ["microservice", "python", "REST"]
+homepage = "https://github.com/beaver-ai"
 license = "MIT"
 
 [tool.poetry.dependencies]
@@ -13,6 +19,9 @@ fastapi-versioning = "^0.10.0"
 fastapi-limiter = "^0.1.4"
 
 [tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+
+[tool.poetry.scripts]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

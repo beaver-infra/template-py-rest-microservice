@@ -2,6 +2,8 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+[![CodeQL](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/codeql.yml/badge.svg)](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/codeql.yml)
+
 The repository is a `project template` for REST microservice built using FastAPI (Python). The latest version supports Python 3.8 and above.
 
 ## Features

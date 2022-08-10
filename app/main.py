@@ -4,9 +4,9 @@ from fastapi import FastAPI
 from fastapi_versioning import VersionedFastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
-from routers.router import api_router
+from app.routers.router import api_router
 # from core.eventHandlers import (start_app_handler, shutdown_app_handler)
-from config import Settings
+from app.config import Settings
 
 """
 Setup logger configuration
@@ -86,13 +86,16 @@ A function that should be run when the application is shutting down.
 async def shutdown_event():
   pass
 
-if __name__ == "__main__":
+def start():
   try:
     uvicorn.run(
-      "main:app",
+      "app.main:app",
       host=setting.get_hostname(),
       port=setting.get_port(),
       reload=True
     )
   except Exception as e:
     print(e)
+
+if __name__ == "__main__":
+  start()

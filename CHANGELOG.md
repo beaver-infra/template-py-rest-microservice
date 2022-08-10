@@ -15,6 +15,11 @@ Release <Date> - v<Version>
 
 ## Changes
 
+Release 10th Aug 2022 - v1.0.1
+
+- [x] Use Poetry to `Start the server`.
+- [x] Refactor packages path.
+
 Release 7th Aug 2022 - v1.0.0
 
 - [x] Use [FastAPI](https://fastapi.tiangolo.com/) as base framework to build the `REST` microservice.

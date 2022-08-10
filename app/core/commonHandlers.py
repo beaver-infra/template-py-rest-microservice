@@ -1,4 +1,4 @@
-from config import Settings
+from app.config import Settings
 from functools import lru_cache
 
 @lru_cache()

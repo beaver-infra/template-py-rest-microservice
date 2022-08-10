@@ -8,7 +8,14 @@ The repository is a `project template` for REST microservice built using FastAPI
 
 ## Prerequisite
 
-* Python 3.8 or above.
+Required
+
+* [Python 3.8 or above](https://www.python.org/downloads/).
+* [Poetry](https://python-poetry.org/)
+
+Optional
+
+* [Docker](https://www.docker.com/)
 
 ## Features
 
@@ -25,24 +32,33 @@ List of features that comes with default template
 
 ## Install
 
+Install dependencies
 ```console
-poetry install --no-root
+poetry install
 ```
+
+Pass `--no-dev` to install without dev dependencies.
 
 ## Run the app
 
-On local/dev env
+**Dev environment**
+
+Run directly
 ```console
-python app/main.py
+poetry run start
 ```
 
-## API Responses
-
-Open browser or postman and type below APIs to see the response
+Run via Docker
 ```console
-http://127.0.0.1:8000/api/v1/info
+Coming soon
 ```
 
+## Tests
+
 ```console
-http://127.0.0.1:8000/api/v1/health
+pytest
 ```
+
+## References
+
+* [Change Logs](CHANGELOG.md)

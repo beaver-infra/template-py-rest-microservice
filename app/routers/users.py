@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from fastapi_versioning import version
-from services.users import ProfileModel
+from app.services.users import ProfileModel
 
 router = APIRouter()
 

@@ -11,6 +11,10 @@ keywords = ["microservice", "python", "REST"]
 homepage = "https://github.com/beaver-ai"
 license = "MIT"
 
+packages = [
+  { include = "app" }
+]
+
 [tool.poetry.dependencies]
 python = "^3.8"
 uvicorn = "^0.18.2"
@@ -22,7 +26,11 @@ fastapi-limiter = "^0.1.4"
 pytest = "^7.1.2"
 
 [tool.poetry.scripts]
+start = "app.main:start"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/beaver-ai/template-py-rest-microservice/issues"

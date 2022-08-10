@@ -15,6 +15,12 @@ Release <Date> - v<Version>
 
 ## Changes
 
+Release 12th Aug 2022 - v1.0.2
+
+- [x] Use Poetry to `Build` and `Test`.
+- [x] Refactor logging module.
+- [x] Enable support for app to run on `Docker`.
+
 Release 10th Aug 2022 - v1.0.1
 
 - [x] Use Poetry to `Start the server`.

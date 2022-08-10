@@ -39,6 +39,11 @@ poetry install
 
 Pass `--no-dev` to install without dev dependencies.
 
+Install dependencies via Docker
+```console
+docker build -t beaver-ai/py-rest-template .
+```
+
 ## Run the app
 
 **Dev environment**
@@ -50,7 +55,7 @@ poetry run start
 
 Run via Docker
 ```console
-Coming soon
+docker run -it -d -p 8000:5000 beaver-ai/py-rest-template
 ```
 
 ## Tests

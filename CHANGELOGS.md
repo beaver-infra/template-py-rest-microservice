@@ -3,7 +3,7 @@
 ## Format
 
 ```
-Release <Date> - v<Version>
+**Release <Date> - v<Version>**
 
 - [x] Change 1
 - [x] Change 2
@@ -15,7 +15,7 @@ Release <Date> - v<Version>
 
 ## Changes
 
-Release 14th Aug 2022 - v1.1.0
+**Draft 14th Aug 2022 - v1.1.0**
 
 - [ ] Add `Docker` support and document the commands to build the Docker image and run the service.
 - [ ] Use Poetry for execute `Build` and `Test` commands.
@@ -29,12 +29,12 @@ Release 14th Aug 2022 - v1.1.0
 - [ ] Setup and Refactor `GitHub Action`.
 - [ ] Setup separate environment for `development`, `stage` and `production`.
 
-Release 10th Aug 2022 - v1.0.1
+**Release 10th Aug 2022 - v1.0.1**
 
 - [x] Use Poetry to `Start the server`.
 - [x] Refactor packages path.
 
-Release 7th Aug 2022 - v1.0.0
+**Release 7th Aug 2022 - v1.0.0**
 
 - [x] Use [FastAPI](https://fastapi.tiangolo.com/) as base framework to build the `REST` microservice.
 - [x] Use [Poetry](https://python-poetry.org/docs/) as a tool for dependency management and packaging in Python.

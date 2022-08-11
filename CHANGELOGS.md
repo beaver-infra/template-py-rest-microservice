@@ -11,15 +11,23 @@ Release <Date> - v<Version>
 
 ### Notes
 
-* Always keep latest changes on top
+* Always keep latest changes on top.
 
 ## Changes
 
-Release 12th Aug 2022 - v1.0.2
+Release 14th Aug 2022 - v1.1.0
 
-- [x] Use Poetry to `Build` and `Test`.
-- [x] Refactor logging module.
-- [x] Enable support for app to run on `Docker`.
+- [ ] Add `Docker` support and document the commands to build the Docker image and run the service.
+- [ ] Use Poetry for execute `Build` and `Test` commands.
+- [ ] Refactor service logger setup and configurations, sidecar container and add logger samples.
+- [ ] Add `Health Check API` interval on Dockerfile config.
+- [ ] Add `Rate limiting` sample.
+- [ ] Setup `Uvicorn`, `Gunicorn` and `Hypercorn`.
+- [ ] Fix PyLint errors and warnings.
+- [ ] Add sample test cases.
+- [ ] Refactor `.github/workflows`.
+- [ ] Setup and Refactor `GitHub Action`.
+- [ ] Setup separate environment for `development`, `stage` and `production`.
 
 Release 10th Aug 2022 - v1.0.1
 
@@ -35,4 +43,4 @@ Release 7th Aug 2022 - v1.0.0
 - [x] Predefined common `logger` for application logging.
 - [x] Preconfigured special routes `/info` and `/health`.
 - [x] Use `Docker` to make it easy to run the app on container and shift it.
-- [x] Predefined `GitHub Actions` for workflows for `PyLint`, `Python-Package`, `CodeQL`, and `Label`.
+- [x] Add configuration files for workflows includes `GitHub Actions`, `PyLint`, `Python-Package`, `CodeQL`, and `Label`.

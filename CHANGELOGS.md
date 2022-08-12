@@ -17,11 +17,11 @@
 
 **Draft 14th Aug 2022 - v1.1.1**
 
+- [x] Fix PyLint errors and warnings.
 - [ ] Use Poetry for execute `Build` and `Test` commands.
 - [ ] Refactor service logger setup and configurations, sidecar container and add logger samples.
 - [ ] Add `Rate limiting` sample.
 - [ ] Setup `Uvicorn`, `Gunicorn` and `Hypercorn`.
-- [ ] Fix PyLint errors and warnings.
 - [ ] Add sample test cases.
 - [ ] Refactor `.github/workflows`.
 - [ ] Setup and Refactor `GitHub Action`.

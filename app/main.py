@@ -1,11 +1,9 @@
-import uvicorn
 import logging
 from fastapi import FastAPI
 from fastapi_versioning import VersionedFastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from app.routers.router import api_router
-# from core.eventHandlers import (start_app_handler, shutdown_app_handler)
 from app.config import Settings
 
 """
@@ -13,7 +11,6 @@ Setup logger configuration
 """
 logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
 
-# get root logger
 """
 Get root logger. The __name__ resolve to "main" since we are at the root of the project.
 This will get the root logger since no logger in the configuration has this name.
@@ -85,17 +82,3 @@ A function that should be run when the application is shutting down.
 @app.on_event("shutdown")
 async def shutdown_event():
   pass
-
-def start():
-  try:
-    uvicorn.run(
-      "app.main:app",
-      host=setting.get_hostname(),
-      port=setting.get_port(),
-      reload=True
-    )
-  except Exception as e:
-    print(e)
-
-if __name__ == "__main__":
-  start()

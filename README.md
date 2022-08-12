@@ -41,27 +41,44 @@ Pass `--no-dev` to install without dev dependencies.
 
 Install dependencies via Docker
 ```console
-docker build -t beaver-ai/py-rest-template .
+docker build -t pyresttemplate .
 ```
 
 ## Run the app
 
 **Dev environment**
 
-Run directly
+Run directly using `Uvicorn`
 ```console
-poetry run start
+uvicorn "app.main:app" --host "0.0.0.0" --port 8000 --reload
 ```
 
-Run via Docker
+Run via `Docker`
 ```console
-docker run -it -d -p 8000:5000 beaver-ai/py-rest-template
+docker run -d -p 8000:8000 pyresttemplate
 ```
 
 ## Tests
 
 ```console
 pytest
+```
+
+## Other
+
+Generate `requirements.txt` from `poetry.lock`
+```console
+poetry export --output requirements.txt
+```
+
+Validate pyproject.toml
+```console
+poetry check
+```
+
+Clean Docker cache
+```console
+docker system prune -a
 ```
 
 ## References

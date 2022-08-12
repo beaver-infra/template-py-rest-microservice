@@ -17,10 +17,10 @@
 
 **Draft 14th Aug 2022 - v1.1.0**
 
-- [ ] Add `Docker` support and document the commands to build the Docker image and run the service.
+- [x] Add `Docker` support and document the commands to build the Docker image and run the service.
+- [x] Add `Health Check API` interval on Dockerfile config.
 - [ ] Use Poetry for execute `Build` and `Test` commands.
 - [ ] Refactor service logger setup and configurations, sidecar container and add logger samples.
-- [ ] Add `Health Check API` interval on Dockerfile config.
 - [ ] Add `Rate limiting` sample.
 - [ ] Setup `Uvicorn`, `Gunicorn` and `Hypercorn`.
 - [ ] Fix PyLint errors and warnings.

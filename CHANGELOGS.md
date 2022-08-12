@@ -18,6 +18,7 @@
 **Draft 14th Aug 2022 - v1.1.1**
 
 - [x] Fix PyLint errors and warnings.
+- [x] Refactor service scaffolding.
 - [ ] Use Poetry for execute `Build` and `Test` commands.
 - [ ] Refactor service logger setup and configurations, sidecar container and add logger samples.
 - [ ] Add `Rate limiting` sample.

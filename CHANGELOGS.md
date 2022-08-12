@@ -15,10 +15,8 @@
 
 ## Changes
 
-**Draft 14th Aug 2022 - v1.1.0**
+**Draft 14th Aug 2022 - v1.1.1**
 
-- [x] Add `Docker` support and document the commands to build the Docker image and run the service.
-- [x] Add `Health Check API` interval on Dockerfile config.
 - [ ] Use Poetry for execute `Build` and `Test` commands.
 - [ ] Refactor service logger setup and configurations, sidecar container and add logger samples.
 - [ ] Add `Rate limiting` sample.
@@ -28,6 +26,11 @@
 - [ ] Refactor `.github/workflows`.
 - [ ] Setup and Refactor `GitHub Action`.
 - [ ] Setup separate environment for `development`, `stage` and `production`.
+
+**Release 12th Aug 2022 - v1.1.0**
+
+- [x] Add `Docker` support and document the commands to build the Docker image and run the service.
+- [x] Add `Health Check API` interval on Dockerfile config.
 
 **Release 10th Aug 2022 - v1.0.1**
 

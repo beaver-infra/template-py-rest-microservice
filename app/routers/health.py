@@ -1,3 +1,7 @@
+"""
+Holds functions used by health API
+"""
+
 from fastapi import APIRouter, status, Depends
 from fastapi_versioning import version
 

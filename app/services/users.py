@@ -1,17 +1,21 @@
+"""
+Holds the model class for request and response for Users sample routes
+"""
+
+import dataclasses
+
+@dataclasses.dataclass
 class ProfileModel():
   """
-  Defined response model for the users service
+  Profile model
   """
-  def __init__(self, *args, **kwargs):
-    pass
-
-  def helloWorld(self):
+  def hello_world(self):
+    """
+    hello world implementation
+    """
     response = {}
-    try:
-      response["status"] = "SUCCESS"
-      response["data"] = str({
-        "text": "Hello World!"
-      })
-      return response
-    except Exception as e:
-      print(e)
+    response["status"] = "SUCCESS"
+    response["data"] = str({
+      "text": "Hello World!"
+    })
+    return response

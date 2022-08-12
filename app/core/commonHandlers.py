@@ -1,3 +1,7 @@
+"""
+Holds all common handler functions used within services
+"""
+
 from app.config import Settings
 from functools import lru_cache
 

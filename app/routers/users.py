@@ -1,3 +1,7 @@
+"""
+Holds functions used by Users Sample API
+"""
+
 from fastapi import APIRouter
 from fastapi_versioning import version
 from app.services.users import ProfileModel
@@ -10,5 +14,5 @@ async def users():
   """
   Return response model of users services as an example
   """
-  p = ProfileModel()
-  return p.helloWorld()
+  profile_model = ProfileModel()
+  return profile_model.hello_world()

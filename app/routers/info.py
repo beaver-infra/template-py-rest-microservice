@@ -1,3 +1,7 @@
+"""
+Holds functions used by info API
+"""
+
 from fastapi import APIRouter, Depends, status
 from fastapi_versioning import version
 from app.core.commonHandlers import get_settings

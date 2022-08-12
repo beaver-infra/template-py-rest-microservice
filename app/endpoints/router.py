@@ -3,7 +3,7 @@ Holds all API routes hosted by the service
 """
 
 from fastapi import APIRouter
-from app.routers import info, health, users
+from app.endpoints import info, health, users
 
 api_router = APIRouter()
 

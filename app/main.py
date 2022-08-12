@@ -2,20 +2,21 @@
 Holds service initialization
 """
 
-import logging
+# import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi_versioning import VersionedFastAPI
-from app.routers.router import api_router
+# from app.endpoints.router import api_router
+from app.api import api_router
 from app.config import Settings
 
 # Setup logger configuration
-logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
+# logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
 
 # Get root logger. The __name__ resolve to "main" since we are at the root of the project.
 # This will get the root logger since no logger in the configuration has this name.
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 def get_app() -> FastAPI:
   """

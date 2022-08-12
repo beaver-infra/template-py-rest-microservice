@@ -32,14 +32,19 @@ List of features that comes with default template
 
 ## Install
 
-Install dependencies
+Install dependencies using `Poetry`
 ```console
 poetry install
 ```
 
 Pass `--no-dev` to install without dev dependencies.
 
-Install dependencies via Docker
+OR install dependencies using `Pip`
+```console
+pip install -r requirements.txt
+```
+
+OR build Docker image
 ```console
 docker build -t pyresttemplate .
 ```
@@ -48,12 +53,12 @@ docker build -t pyresttemplate .
 
 **Dev environment**
 
-Run directly using `Uvicorn`
+Using `Uvicorn`
 ```console
-uvicorn "app.main:app" --host "0.0.0.0" --port 8000 --reload
+uvicorn "app.main:app" --host="0.0.0.0" --port=8000 --reload
 ```
 
-Run via `Docker`
+OR using `Docker`
 ```console
 docker run -d -p 8000:8000 pyresttemplate
 ```
@@ -64,9 +69,9 @@ docker run -d -p 8000:8000 pyresttemplate
 pytest
 ```
 
-## Other
+## Other useful commands
 
-Generate `requirements.txt` from `poetry.lock`
+Any new package installation, should generate the requirements.txt as well. Generate `requirements.txt` from `poetry.lock`
 ```console
 poetry export --output requirements.txt
 ```
@@ -76,7 +81,7 @@ Validate pyproject.toml
 poetry check
 ```
 
-Clean Docker cache
+(!) Avoid using, Docker will reset and all image cache will be cleaned.
 ```console
 docker system prune -a
 ```

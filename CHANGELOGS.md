@@ -15,11 +15,8 @@
 
 ## Changes
 
-**Draft 14th Aug 2022 - v1.1.1**
+**Draft**
 
-- [x] Fix PyLint errors and warnings.
-- [x] Fix PyLint Action bug for package installation.
-- [x] Refactor service scaffolding.
 - [ ] Use Poetry for execute `Build` and `Test` commands.
 - [ ] Refactor service logger setup and configurations, sidecar container and add logger samples.
 - [ ] Add `Rate limiting` sample.
@@ -28,6 +25,13 @@
 - [ ] Refactor `.github/workflows`.
 - [ ] Setup and Refactor `GitHub Action`.
 - [ ] Setup separate environment for `development`, `stage` and `production`.
+
+**Release 14th Aug 2022 - v1.1.1**
+
+- [x] Fix PyLint errors and warnings.
+- [x] Fix `fastapi import error` on PyLint Action job.
+- [x] Refactor service scaffolding.
+- [x] Fix PyLint, License Tag status reference.
 
 **Release 12th Aug 2022 - v1.1.0**
 

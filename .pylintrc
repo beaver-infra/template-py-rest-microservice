@@ -1,3 +1,6 @@
+[MASTER]
+extension-pkg-whitelist=pydantic
+
 [FORMAT]
 
 # String used as indentation unit. This is usually "    " (4 spaces) or "\t" (1

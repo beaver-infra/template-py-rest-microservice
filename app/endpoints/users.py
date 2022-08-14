@@ -2,11 +2,10 @@
 Holds functions used by Users Sample API
 """
 
-from fastapi import APIRouter
+from fastapi import APIRouter, status
 from fastapi_versioning import version
 from app.models.users import UserModel
-
-# router = APIRouter()
+from app.mocks.users import mock_users
 
 router = APIRouter(
   prefix="/users",
@@ -14,26 +13,31 @@ router = APIRouter(
   responses={404: {"description": "Not found"}}
 )
 
-@router.get("/", status_code=200)
+@router.get("/", status_code=status.HTTP_200_OK)
 @version(1)
 async def users():
   """
   Return sample response
   """
-  return [{"user_id": 1, "first_name": "Ashwin", "last_name": "Hegde", "email": "ashwin.hegde3@gmail.com"}]
+  return mock_users()
 
-@router.get("/user", status_code=200)
+@router.get("/user", status_code=status.HTTP_200_OK)
 @version(1)
-async def users():
+async def user():
   """
   Return sample response
   """
-  return {"user_id": 1, "first_name": "Ashwin", "last_name": "Hegde", "email": "ashwin.hegde3@gmail.com"}
+  return mock_users[0]
 
-@router.post("/user", status_code=200)
+@router.post("/user", status_code=status.HTTP_200_OK)
 @version(1)
-async def users(user: UserModel):
+async def add_user(user: UserModel):
   """
   Return sample response
   """
-  return {"user_id": user.user_id, "first_name": user.first_name, "last_name": user.last_name, "email": user.email}
+  return {
+    "user_id": user.user_id,
+    "first_name": user.first_name,
+    "last_name": user.last_name,
+    "email": user.email
+  }

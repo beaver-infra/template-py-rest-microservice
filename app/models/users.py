@@ -2,9 +2,11 @@
 Holds the model class for request and response for Users sample routes
 """
 
-from pydantic import BaseModel, Field
 from typing import Optional
+from dataclasses import dataclass
+from pydantic import BaseModel, Field
 
+@dataclass
 class UserModel(BaseModel):
   """
   User model
@@ -16,4 +18,4 @@ class UserModel(BaseModel):
   last_name: str = Field(
     None, title="Last name", max_length=50
   )
-  email: str
+  email: Optional[str] = None

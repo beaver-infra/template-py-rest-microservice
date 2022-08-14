@@ -2,8 +2,8 @@
 Holds all common handler functions used within services
 """
 
-from app.config import Configs
 from functools import lru_cache
+from app.config import Configs
 
 @lru_cache()
 def get_configs():

@@ -1,6 +1,6 @@
 # Template Python REST Microservice
 
-![PyLint](https://img.shields.io/badge/PyLint-10.00/10-success) [![CodeQL](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/codeql.yml/badge.svg)](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/codeql.yml) ![License](https://img.shields.io/badge/License-MIT-blue)
+[![Pylint](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/pylint.yml/badge.svg)](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/pylint.yml) [![CodeQL](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/codeql.yml/badge.svg)](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/codeql.yml) ![License](https://img.shields.io/badge/License-MIT-blue)
 
 The repository is a `project template` for REST microservice built using FastAPI (Python). The latest version supports Python 3.8 and above.
 

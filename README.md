@@ -26,7 +26,7 @@ List of features that comes with default template
 - [x] Predefined common `logger` for application logging.
 - [x] Preconfigured special routes `/info` and `/health`.
 - [x] Use `Docker` to make it easy to run the app on container and shift it.
-- [x] Predefined `GitHub Actions` for workflows for `PyLint`, `Python-Package`, `CodeQL`, and `Label`.
+- [x] Predefined `GitHub Actions` for workflows for `PyLint` and `CodeQL`.
 
 ## Install
 

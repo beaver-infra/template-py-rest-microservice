@@ -1,6 +1,6 @@
 # Template Python REST Microservice
 
-[![Pylint](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/pylint.yml/badge.svg)](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/pylint.yml) [![CodeQL](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/codeql.yml/badge.svg)](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/codeql.yml) ![License](https://img.shields.io/badge/License-MIT-blue)
+[![Pylint](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/pylint.yml/badge.svg)](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/pylint.yml) [![CodeQL](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/codeql.yml/badge.svg)](https://github.com/beaver-ai/template-py-rest-microservice/actions/workflows/codeql.yml) [![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/beaver-ai/template-py-rest-microservice/blob/main/LICENSE)
 
 The repository is a `project template` for REST microservice built using FastAPI (Python). The latest version supports Python 3.8 and above.
 
@@ -87,3 +87,4 @@ docker system prune -a
 ## References
 
 * [Change Logs](CHANGELOG.md)
+* [PyLint Errors](https://vald-phoenix.github.io/pylint-errors/#list-of-errors)

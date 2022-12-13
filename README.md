@@ -30,69 +30,57 @@ List of features that comes with default template
 
 ## Setup
 
-### Global Environment Variables
+### Environment Variables**
+
+```console
+export <Name>=<Value>
+
+For example:
+export BEAVER_API_SYS_INS_TYPE="DEVELOPMENT"
+```
+
+| Name | Purpose | Possible Values |
+|:---|:---|:---|
+| BEAVER_API_SYS_INS_TYPE | Help to identify system instance type on which the app service is running | `DEVELOPMENT`, `STAGE` and `PRODUCTION` |
+
+### Development
 
 ```console
 export BEAVER_API_SYS_INS_TYPE="DEVELOPMENT"
 ```
-Possible values - `DEVELOPMENT`, `STAGE` and `PRODUCTION`.
 
-
-### Install
-
-#### Using Poetry
-
-```console
-poetry install
-```
-
-Pass `--no-dev` to install without dev dependencies.
-
-#### Using Pip
+**Install all dependencies using Pip**
 
 ```console
 pip install -r requirements.txt
 ```
 
-### Build
-
-#### Using Docker
-
-```console
-docker build -t pyresttemplate .
-```
-
-### Run the app
-
-#### Using Uvicorn in Dev env
+**Run the service**
 
 ```console
 uvicorn "app.main:app" --host="0.0.0.0" --port=8000 --reload
 ```
 
-#### Using Docker in Dev env
+**Build & Run the service using Docker**
 
 ```console
+docker build -t pyresttemplate .
 docker run -d -p 8000:8000 pyresttemplate
 ```
 
-### Run the tests
-
-#### On Dev env
+**Run the tests**
 
 ```console
 pytest
 ```
 
-### Run the API Swagger Docs
-
-#### On Dev env
+**Run the Swagger API Docs**
 
 ```console
 http://localhost:<PORT>/api/v1/docss
 ```
 
-### Run the app Lint
+**Run the lint**
 
 Run pylint before committing the changes and ensure code quality at least 9.30/10
 
@@ -100,24 +88,41 @@ Run pylint before committing the changes and ensure code quality at least 9.30/1
 pylint --rcfile .pylintrc app
 ```
 
-## Other useful commands
+### Stage
 
-Any new package installation, should generate the requirements.txt as well. Generate `requirements.txt` from `poetry.lock`
 ```console
-poetry export --output requirements.txt
+export BEAVER_API_SYS_INS_TYPE="STAGE"
 ```
 
-Validate pyproject.toml
+**Install only dependencies (exclude dev-dependencies) using Poetry**
 ```console
-poetry check
+poetry install --no-dev
 ```
 
-(!) Avoid using, Docker will reset and all image cache will be cleaned.
+**Run the Swagger API Docs**
+
 ```console
-docker system prune -a
+http://<STAGE_BASE_URL>:<STAGE_PORT>/api/v1/docss
+```
+
+### Production
+
+```console
+export BEAVER_API_SYS_INS_TYPE="PRODUCTION"
+```
+
+**Install only dependencies (exclude dev-dependencies) using Poetry**
+```console
+poetry install --no-dev
+```
+
+**Run the Swagger API Docs**
+
+```console
+http://<PRODUCTION_BASE_URL>:<PRODUCTION_PORT>/api/v1/docss
 ```
 
 ## References
 
-* [Change Logs](CHANGELOG.md)
+* [Change Logs](CHANGELOGS.md)
 * [PyLint Errors](https://vald-phoenix.github.io/pylint-errors/#list-of-errors)

@@ -101,6 +101,12 @@ export BEAVER_API_SYS_INS_TYPE="STAGE"
 poetry install --no-dev
 ```
 
+**Run the service**
+
+```console
+uvicorn "app.main:app" --host="<STAGE_HOST_IP>" --port=<STAGE_PORT> --workers 2
+```
+
 **Run the Swagger API Docs**
 
 ```console
@@ -118,10 +124,16 @@ export BEAVER_API_SYS_INS_TYPE="PRODUCTION"
 poetry install --no-dev
 ```
 
+**Run the service**
+
+```console
+uvicorn "app.main:app" --host="<PRODUCTION_HOST_IP>" --port=<PRODUCTION_PORT> --workers 4
+```
+
 **Run the Swagger API Docs**
 
 ```console
-http://<PRODUCTION_BASE_URL>:<PRODUCTION_PORT>/api/v1/docss
+http://<PRODUCTION_BASE_URL>:<PRODUCTION_PORT>/api/v1/docs
 ```
 
 ## References

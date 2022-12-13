@@ -28,43 +28,60 @@ List of features that comes with default template
 - [x] Use `Docker` to make it easy to run the app on container and shift it.
 - [x] Predefined `GitHub Actions` for workflows for `PyLint` and `CodeQL`.
 
-## Install
+## Setup
 
-Install dependencies using `Poetry`
+### Install
+
+#### Using Poetry
+
 ```console
 poetry install
 ```
 
 Pass `--no-dev` to install without dev dependencies.
 
-OR install dependencies using `Pip`
+#### Using Pip
+
 ```console
 pip install -r requirements.txt
 ```
 
-OR build Docker image
+### Build
+
+#### Using Docker
+
 ```console
 docker build -t pyresttemplate .
 ```
 
-## Run the app
+### Run the app
 
-**Dev environment**
+#### Using Uvicorn in Dev env
 
-Using `Uvicorn`
 ```console
 uvicorn "app.main:app" --host="0.0.0.0" --port=8000 --reload
 ```
 
-OR using `Docker`
+#### Using Docker in Dev env
+
 ```console
 docker run -d -p 8000:8000 pyresttemplate
 ```
 
-## Tests
+### Run the tests
+
+#### On Dev env
 
 ```console
 pytest
+```
+
+### Run the API Swagger Docs
+
+#### On Dev env
+
+```console
+http://localhost:<PORT>/api/v1/docss
 ```
 
 ## Other useful commands

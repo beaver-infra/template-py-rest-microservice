@@ -5,3 +5,5 @@ loguru
 pydantic
 uvicorn
 requests
+httpx
+pytest

@@ -1,9 +1,10 @@
 """
 Holds all common handler functions used within services
 """
-
+import os
 from functools import lru_cache
 from app.config import Configs
+from app.configs import development, production, stage
 
 @lru_cache()
 def get_configs():
@@ -13,3 +14,12 @@ def get_configs():
   instead of computing it again, executing the code of the function every time.
   """
   return Configs()
+
+def get_system_env():
+  api_sys_env = os.getenv("BEAVER_API_SYS_ENV", "DEVELOPMENT")
+  if api_sys_env == "PRODUCTION":
+    return production
+  elif api_sys_env == "STAGE":
+    return stage
+  else:
+    return development

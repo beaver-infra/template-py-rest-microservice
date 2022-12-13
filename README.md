@@ -30,6 +30,14 @@ List of features that comes with default template
 
 ## Setup
 
+### Global Environment Variables
+
+```console
+export BEAVER_API_SYS_ENV="DEVELOPMENT"
+```
+Possible values - `DEVELOPMENT`, `STAGE` and `PRODUCTION`.
+
+
 ### Install
 
 #### Using Poetry

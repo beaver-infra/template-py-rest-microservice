@@ -4,3 +4,4 @@ fastapi
 loguru
 pydantic
 uvicorn
+requests

@@ -5,6 +5,7 @@ Holds functions used by Users Sample API
 from fastapi import APIRouter, status
 from fastapi_versioning import version
 from app.models.users import UserModel
+import requests
 
 router = APIRouter(
   prefix="/users",
@@ -18,25 +19,23 @@ async def get_users():
   """
   Return sample response
   """
-  return [{
-    "user_id": 1,
-    "first_name": "Ashwin",
-    "last_name": "Hegde",
-    "email": "ashwin.hegde3@gmail.com"
-  }]
+  response = requests.get(f"https://jsonplaceholder.typicode.com/users")
+  if response.status_code == status.HTTP_200_OK:
+    return response.json()
+  else:
+    return None
 
-@router.get("/user", status_code=status.HTTP_200_OK)
+@router.get("/{user_id}", status_code=status.HTTP_200_OK)
 @version(1)
-async def get_user():
+async def get_user(user_id: int):
   """
   Return sample response
   """
-  return {
-    "user_id": 1,
-    "first_name": "Ashwin",
-    "last_name": "Hegde",
-    "email": "ashwin.hegde3@gmail.com"
-  }
+  response = requests.get(f"https://jsonplaceholder.typicode.com/users/{user_id}")
+  if response.status_code == status.HTTP_200_OK:
+    return response.json()
+  else:
+    return None
 
 @router.post("/user", status_code=status.HTTP_200_OK)
 @version(1)

@@ -4,7 +4,7 @@ Holds all service level configurations
 
 from pydantic import BaseSettings
 
-class Configs(BaseSettings):
+class Metadata(BaseSettings):
   """
   Return the application's metadata info
   """

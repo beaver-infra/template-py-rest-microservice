@@ -3,17 +3,17 @@ Holds all common handler functions used within services
 """
 import os
 from functools import lru_cache
-from app.config import Configs
+from app.metadata import Metadata
 from app.configs import development, production, stage
 
 @lru_cache()
-def get_configs():
+def get_service_metadata():
   """
   Return Configs class which holds application's metadata info
   @lru_cache() Decorates to return the same value that was returned the first time,
   instead of computing it again, executing the code of the function every time.
   """
-  return Configs()
+  return Metadata()
 
 def get_system_env():
   """

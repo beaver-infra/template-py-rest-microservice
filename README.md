@@ -92,6 +92,14 @@ pytest
 http://localhost:<PORT>/api/v1/docss
 ```
 
+### Run the app Lint
+
+Run pylint before committing the changes and ensure code quality at least 9.30/10
+
+```console
+pylint --rcfile .pylintrc app
+```
+
 ## Other useful commands
 
 Any new package installation, should generate the requirements.txt as well. Generate `requirements.txt` from `poetry.lock`

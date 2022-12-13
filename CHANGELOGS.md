@@ -24,7 +24,11 @@
 - [ ] Add sample test cases.
 - [ ] Refactor `.github/workflows`.
 - [ ] Setup and Refactor `GitHub Action`.
-- [ ] Setup separate environment for `development`, `stage` and `production`.
+
+**Release 13th Dec 2022 - v1.1.2**
+
+- [x] Refactor User APIs downstream data calls
+- [x] Setup separate environment for `development`, `stage` and `production`.
 
 **Release 14th Aug 2022 - v1.1.1**
 

@@ -33,7 +33,7 @@ List of features that comes with default template
 ### Global Environment Variables
 
 ```console
-export BEAVER_API_SYS_ENV="DEVELOPMENT"
+export BEAVER_API_SYS_INS_TYPE="DEVELOPMENT"
 ```
 Possible values - `DEVELOPMENT`, `STAGE` and `PRODUCTION`.
 

@@ -16,10 +16,16 @@ def get_configs():
   return Configs()
 
 def get_system_env():
-  api_sys_env = os.getenv("BEAVER_API_SYS_ENV", "DEVELOPMENT")
+  """
+  Return Configs ckass
+  """
+  api_sys_env = os.getenv("BEAVER_API_SYS_INS_TYPE", "DEVELOPMENT")
+
   if api_sys_env == "PRODUCTION":
     return production
-  elif api_sys_env == "STAGE":
+
+  if api_sys_env == "STAGE":
     return stage
-  else:
+
+  if api_sys_env == None or api_sys_env == "DEVELOPMENT":
     return development

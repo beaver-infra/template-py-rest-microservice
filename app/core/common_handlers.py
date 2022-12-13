@@ -15,17 +15,25 @@ def get_service_metadata():
   """
   return Metadata()
 
-def get_system_env():
+@lru_cache()
+def get_instance_type_configs():
   """
-  Return Configs ckass
+  Return system instance type where the service is running, either dev/stage/production env,
+  depends on system variable BEAVER_API_SYS_INS_TYPE configured
   """
-  api_sys_env = os.getenv("BEAVER_API_SYS_INS_TYPE", "DEVELOPMENT")
+  sys_ins_type = os.getenv("BEAVER_API_SYS_INS_TYPE")
 
-  if api_sys_env == "PRODUCTION":
+  if sys_ins_type == "PRODUCTION":
     return production
 
-  if api_sys_env == "STAGE":
+  if sys_ins_type == "STAGE":
     return stage
 
-  if api_sys_env == None or api_sys_env == "DEVELOPMENT":
+  if sys_ins_type == None or sys_ins_type == "DEVELOPMENT":
     return development
+
+def get_app_port():
+  """
+  Return service port on which its running
+  """
+  

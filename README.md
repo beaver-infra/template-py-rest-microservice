@@ -30,7 +30,7 @@ List of features that comes with default template
 
 ## Setup
 
-### Environment Variables**
+### Environment Variables
 
 ```console
 export <Name>=<Value>
@@ -38,6 +38,8 @@ export <Name>=<Value>
 For example:
 export BEAVER_API_SYS_INS_TYPE="DEVELOPMENT"
 ```
+
+:warning: No space before and after `=` sign.
 
 | Name | Purpose | Possible Values |
 |:---|:---|:---|

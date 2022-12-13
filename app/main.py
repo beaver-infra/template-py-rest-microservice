@@ -7,14 +7,17 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi_versioning import VersionedFastAPI
 from app.api import api_router
-# from app.config import Configs
+from app.metadata import Metadata
 
-# configs = Configs()
+metadata = Metadata()
 
 # Create FastAPI app instance and return with default configured settings
 app = FastAPI(
-  # metadata
-  # debug=configs.is_debug_mode()
+  title=metadata.get_service_title(),
+  description=metadata.get_service_description(),
+  version=metadata.get_service_release_version(),
+  contact=metadata.get_service_contact(),
+  # debug=metadata.is_debug_mode()
 )
 
 # Allow cross origin resource sharing with default configurations

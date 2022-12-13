@@ -15,8 +15,4 @@ async def info(metadata: Metadata = Depends(get_service_metadata)):
   """
   Return microservice metadata info
   """
-  return {
-    "microservice_name": metadata.microservice_name,
-    "microservice_version": metadata.microservice_version,
-    "contact": metadata.contact
-  }
+  return metadata.get_metadata()

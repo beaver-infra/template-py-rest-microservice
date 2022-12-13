@@ -14,14 +14,15 @@ router = APIRouter(
   responses={404: {"description": "Not found"}}
 )
 
+configs = common_handlers.get_instance_type_configs()
+baseUrl = configs.DOWNSTREAM_CONNECT["JSON_PLACE_HOLDER"]
+
 @router.get("/", status_code=status.HTTP_200_OK)
 @version(1)
 async def get_users():
   """
   Return sample response
   """
-  configs = common_handlers.get_instance_type_configs()
-  baseUrl = configs.DOWNSTREAM_CONNECT["JSON_PLACE_HOLDER"]
   response = requests.get(f"{baseUrl}/users", timeout=10)
   if response.status_code == status.HTTP_200_OK:
     return response.json()
@@ -33,7 +34,6 @@ async def get_user(user_id: int):
   """
   Return sample response
   """
-  configs = common_handlers.get_instance_type_configs()
   response = requests.get(f"{baseUrl}/users/{user_id}", timeout=10)
   if response.status_code == status.HTTP_200_OK:
     return response.json()

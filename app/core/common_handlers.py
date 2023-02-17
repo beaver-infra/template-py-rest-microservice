@@ -3,6 +3,7 @@ Holds all common handler functions used within services
 """
 import os
 from functools import lru_cache
+
 from omegaconf import OmegaConf
 
 from app.configs import development, production, stage
@@ -26,15 +27,15 @@ def load_config():
     depends on system variable BEAVER_API_SYS_INS_TYPE configured
     """
     sys_ins_type = os.getenv("BEAVER_API_SYS_INS_TYPE")
-    
+
     if sys_ins_type == "PRODUCTION":
-        return OmegaConf.load('app/configs/production.yml')
+        return OmegaConf.load("app/configs/production.yml")
 
     if sys_ins_type == "STAGE":
-        return OmegaConf.load('app/configs/stage.yml')
+        return OmegaConf.load("app/configs/stage.yml")
 
     if sys_ins_type == None or sys_ins_type == "DEVELOPMENT":
-        return OmegaConf.load('app/configs/development.yml')
+        return OmegaConf.load("app/configs/development.yml")
 
 
 def get_app_port():

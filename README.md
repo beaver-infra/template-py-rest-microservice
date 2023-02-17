@@ -28,6 +28,38 @@ List of features that comes with default template
 - [x] Use `Docker` to make it easy to run the app on container and shift it.
 - [x] Predefined `GitHub Actions` for workflows for `PyLint` and `CodeQL`.
 
+## Code Structure
+
+Feel free to modify the layout of the repo as much as you want but the given structure is as follows:
+
+```
+app/
+├── __init__.py
+├── main.py
+├── api.py
+├── metadata.py
+├── configs/
+│   └── development.py
+│   └── production.py
+│   └── stage.py
+├── core/
+│   └── common_handlers.py
+├── endpoints/
+│   └── health.py
+│   └── info.py
+│   └── router.py
+│   └── users.py
+├── middlewares/
+│   └── validation.py
+└── models/
+    └── users.py
+├── test_main.py
+```
+
+* `__init__.py` defines and initializes the app configuration.
+
+* `main.py` defines the FastAPI application, adds middleware, includes routers, and creates the Mangum handler.
+
 ## Setup
 
 ### Environment Variables

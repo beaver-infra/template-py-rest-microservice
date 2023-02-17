@@ -3,6 +3,7 @@ Holds all common handler functions used within services
 """
 import os
 from functools import lru_cache
+from omegaconf import OmegaConf
 
 from app.configs import development, production, stage
 from app.metadata import Metadata
@@ -19,21 +20,21 @@ def get_service_metadata():
 
 
 @lru_cache()
-def get_instance_type_configs():
+def load_config():
     """
     Return system instance type where the service is running, either dev/stage/production env,
     depends on system variable BEAVER_API_SYS_INS_TYPE configured
     """
     sys_ins_type = os.getenv("BEAVER_API_SYS_INS_TYPE")
-
+    
     if sys_ins_type == "PRODUCTION":
-        return production
+        return OmegaConf.load('app/configs/production.yml')
 
     if sys_ins_type == "STAGE":
-        return stage
+        return OmegaConf.load('app/configs/stage.yml')
 
     if sys_ins_type == None or sys_ins_type == "DEVELOPMENT":
-        return development
+        return OmegaConf.load('app/configs/development.yml')
 
 
 def get_app_port():

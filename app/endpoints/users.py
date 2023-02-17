@@ -13,8 +13,8 @@ router = APIRouter(
     prefix="/users", tags=["Users"], responses={404: {"description": "Not found"}}
 )
 
-configs = common_handlers.get_instance_type_configs()
-BASE_URL = configs.DOWNSTREAM_CONNECT["JSON_PLACE_HOLDER"]
+CONFIG = common_handlers.load_config()
+BASE_URL = CONFIG.DOWNSTREAMS.JSON_PLACE_HOLDER
 
 
 @router.get("/", status_code=status.HTTP_200_OK)

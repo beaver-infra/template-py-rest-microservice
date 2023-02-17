@@ -1,0 +1,7 @@
+APP:
+    HOSTNAME: 127.0.0.1
+    PORT: 8000
+    DEBUG: True
+
+DOWNSTREAMS:
+    JSON_PLACE_HOLDER: https://jsonplaceholder.typicode.com

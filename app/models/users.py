@@ -2,8 +2,9 @@
 Holds the model class for request and response for Users sample routes
 """
 
-from typing import Optional
 from dataclasses import dataclass
+from typing import Optional
+
 from pydantic import BaseModel, Field
 
 

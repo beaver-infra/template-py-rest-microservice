@@ -92,10 +92,11 @@ pylint --rcfile .pylintrc app
 
 **Run the formatter**
 
-Run black before committing the changes
+Run black & isort before committing the changes
 
 ```console
 black app
+isort **/*.py
 ```
 
 ### Stage

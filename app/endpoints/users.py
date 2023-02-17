@@ -5,8 +5,9 @@ Holds functions used by Users Sample API
 import requests
 from fastapi import APIRouter, status
 from fastapi_versioning import version
-from app.models.users import UserModel
+
 from app.core import common_handlers
+from app.models.users import UserModel
 
 router = APIRouter(
     prefix="/users", tags=["Users"], responses={404: {"description": "Not found"}}

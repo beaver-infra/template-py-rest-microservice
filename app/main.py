@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi_versioning import VersionedFastAPI
+
 from app.api import api_router
 from app.metadata import Metadata
 

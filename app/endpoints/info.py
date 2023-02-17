@@ -4,6 +4,7 @@ Holds functions used by info API
 
 from fastapi import APIRouter, Depends, status
 from fastapi_versioning import version
+
 from app.core.common_handlers import get_service_metadata
 from app.metadata import Metadata
 

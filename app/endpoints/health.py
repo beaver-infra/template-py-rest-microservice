@@ -2,7 +2,7 @@
 Holds functions used by health API
 """
 
-from fastapi import APIRouter, status, Depends
+from fastapi import APIRouter, Depends, status
 from fastapi_versioning import version
 
 router = APIRouter()

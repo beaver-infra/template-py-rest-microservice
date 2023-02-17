@@ -8,3 +8,5 @@ requests
 httpx
 pytest
 pylint
+black
+isort

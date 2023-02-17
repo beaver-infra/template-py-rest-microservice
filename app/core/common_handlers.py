@@ -3,8 +3,9 @@ Holds all common handler functions used within services
 """
 import os
 from functools import lru_cache
-from app.metadata import Metadata
+
 from app.configs import development, production, stage
+from app.metadata import Metadata
 
 
 @lru_cache()

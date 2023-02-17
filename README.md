@@ -79,7 +79,7 @@ pytest
 **Run the Swagger API Docs**
 
 ```console
-http://localhost:<PORT>/api/v1/docss
+http://localhost:<PORT>/api/v1/docs
 ```
 
 **Run the lint**
@@ -88,6 +88,14 @@ Run pylint before committing the changes and ensure code quality at least 9.30/1
 
 ```console
 pylint --rcfile .pylintrc app
+```
+
+**Run the formatter**
+
+Run black before committing the changes
+
+```console
+black app
 ```
 
 ### Stage

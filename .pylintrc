@@ -6,4 +6,4 @@ extension-pkg-whitelist=pydantic
 # String used as indentation unit. This is usually "    " (4 spaces) or "\t" (1
 # tab).
 # Use 2 spaces consistent with TensorFlow style.
-indent-string='  '
+indent-string='    '

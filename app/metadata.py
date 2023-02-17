@@ -13,7 +13,7 @@ class Metadata(BaseSettings):
     description = (
         "Service to fetch the list of dummy users from 3rd party downstream services"
     )
-    version = "1.1.2"
+    version = "1.1.3"
     contact = {
         "name": "Ashwin Hegde",
         "url": "https://github.com/hegdeashwin",

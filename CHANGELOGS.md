@@ -15,15 +15,11 @@
 
 ## Changes
 
-**Draft**
+**Release 17th Feb 2023 - v1.1.3**
 
-- [ ] Use Poetry for execute `Build` and `Test` commands.
-- [ ] Refactor service logger setup and configurations, sidecar container and add logger samples.
-- [ ] Add `Rate limiting` sample.
-- [ ] Setup `Uvicorn`, `Gunicorn` and `Hypercorn`.
-- [ ] Add sample test cases.
-- [ ] Refactor `.github/workflows`.
-- [ ] Setup and Refactor `GitHub Action`.
+- [x] Format *.py files via `Black` and `isort`.
+- [x] Generate `poetry.lock` file.
+- [x] Format version in pyproject.toml file.
 
 **Release 13th Dec 2022 - v1.1.2**
 

@@ -1,7 +1,6 @@
 """
 Holds all service level configurations
 """
-import os
 from pydantic import BaseSettings
 
 
@@ -22,15 +21,27 @@ class Metadata(BaseSettings):
     }
 
     def get_service_title(self):
+        """
+        Return title
+        """
         return self.title
 
     def get_service_description(self):
+        """
+        Return description
+        """
         return self.description
 
     def get_service_release_version(self):
+        """
+        Return version
+        """
         return self.version
 
     def get_service_contact(self):
+        """
+        Return contact
+        """
         return self.contact
 
     def get_hostname(self):
@@ -53,6 +64,9 @@ class Metadata(BaseSettings):
         return True
 
     def get_metadata(self):
+        """
+        Return metadata object
+        """
         return {
             "title": self.title,
             "description": self.description,

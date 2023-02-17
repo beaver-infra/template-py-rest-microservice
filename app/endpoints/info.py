@@ -9,10 +9,11 @@ from app.metadata import Metadata
 
 router = APIRouter()
 
+
 @router.get("/info", status_code=status.HTTP_200_OK)
 @version(1)
 async def info(metadata: Metadata = Depends(get_service_metadata)):
-  """
-  Return microservice metadata info
-  """
-  return metadata.get_metadata()
+    """
+    Return microservice metadata info
+    """
+    return metadata.get_metadata()

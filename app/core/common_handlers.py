@@ -27,17 +27,13 @@ def load_config():
     """
     sys_ins_type = os.getenv("BEAVER_API_SYS_INS_TYPE")
 
-    if sys_ins_type == "PRODUCTION":
-        return OmegaConf.load("app/configs/production.yml")
+    if sys_ins_type in "PRODUCTION":
+        file = OmegaConf.load("app/configs/production.yml")
 
-    if sys_ins_type == "STAGE":
-        return OmegaConf.load("app/configs/stage.yml")
+    if sys_ins_type in "STAGE":
+        file = OmegaConf.load("app/configs/stage.yml")
 
-    if sys_ins_type == None or sys_ins_type == "DEVELOPMENT":
-        return OmegaConf.load("app/configs/development.yml")
+    if sys_ins_type in "DEVELOPMENT":
+        file = OmegaConf.load("app/configs/development.yml")
 
-
-def get_app_port():
-    """
-    Return service port on which its running
-    """
+    return file

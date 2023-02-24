@@ -16,7 +16,9 @@ metadata = Metadata()
 
 
 def get_app() -> FastAPI:
-    # Create FastAPI app instance and return with default configured settings
+    """
+    Create FastAPI app instance and return with default configured settings
+    """
     fast_app = FastAPI(
         title=metadata.get_service_title(),
         description=metadata.get_service_description(),
@@ -47,6 +49,7 @@ def get_app() -> FastAPI:
         fast_app, version_format="{major}", prefix_format="/api/v{major}"
     )
 
+    # Configure startup/shutdown special event handlers
     fast_app.add_event_handler("startup", startup_event_handler(fast_app))
     fast_app.add_event_handler("shutdown", shutdown_event_handler(fast_app))
 

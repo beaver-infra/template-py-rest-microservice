@@ -119,7 +119,7 @@ http://localhost:<PORT>/api/v1/docs
 Run pylint before committing the changes and ensure code quality at least 9.30/10
 
 ```console
-pylint --rcfile .pylintrc app
+pylint --rcfile .pylintrc $(git ls-files '*.py')
 ```
 
 **Run the formatter**

@@ -1,10 +1,10 @@
 """
 Holds all special handler functions used within services
 """
+# pylint: disable-all
 from typing import Callable
 
 from fastapi import FastAPI
-
 
 def _startup_event(app: FastAPI) -> None:
     """

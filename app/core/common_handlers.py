@@ -6,7 +6,6 @@ from functools import lru_cache
 
 from omegaconf import OmegaConf
 
-from app.configs import development, production, stage
 from app.metadata import Metadata
 
 

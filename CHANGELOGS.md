@@ -15,6 +15,10 @@
 
 ## Changes
 
+**Release 13th Feb 2024 - v1.1.5**
+
+- [x] Fix docker execution for dev and prod env.
+
 **Release 12th Feb 2024 - v1.1.4**
 
 - [x] Refactor codebase inline comments using GPT-3.5-Turbo model.

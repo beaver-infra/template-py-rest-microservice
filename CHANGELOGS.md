@@ -15,6 +15,15 @@
 
 ## Changes
 
+**Release 12th Feb 2024 - v1.1.4**
+
+- [x] Refactor codebase inline comments using GPT-3.5-Turbo model.
+- [x] Improve readme documentation.
+- [x] Refactor Dockerfile configuration for dev and prod.
+- [x] Add `docker-image` and `docker-publish` actions workflow.
+- [x] Use `Uvicorn` only for dev env.
+- [x] Add support for `Gunicorn with Univorn 4 Workers` for prod env.
+
 **Release 17th Feb 2023 - v1.1.3**
 
 - [x] Format *.py files via `Black` and `isort`.

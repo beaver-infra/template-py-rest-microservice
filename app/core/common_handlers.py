@@ -23,17 +23,15 @@ def get_service_metadata():
 def load_config():
     """
     Return system instance type where the service is running, either dev/stage/production env,
-    depends on system variable BEAVER_API_SYS_INS_TYPE configured
+    depends on system variable INSTANCE_ENVIRONMENT configured
     """
-    sys_ins_type = os.getenv("BEAVER_API_SYS_INS_TYPE")
-
-    if sys_ins_type in "PRODUCTION":
+    instance_environment = os.getenv("INSTANCE_ENVIRONMENT")
+    file = OmegaConf.load("app/configs/development.yml")
+    
+    if instance_environment == "PRODUCTION":
         file = OmegaConf.load("app/configs/production.yml")
 
-    if sys_ins_type in "STAGE":
+    if instance_environment == "STAGE":
         file = OmegaConf.load("app/configs/stage.yml")
-
-    if sys_ins_type in "DEVELOPMENT":
-        file = OmegaConf.load("app/configs/development.yml")
 
     return file

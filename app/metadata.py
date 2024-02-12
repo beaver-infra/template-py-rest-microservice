@@ -1,20 +1,18 @@
 """
 Holds all service level configurations
 """
-from pydantic import BaseSettings
-
+from pydantic_settings import BaseSettings
+from typing import ClassVar
 
 class Metadata(BaseSettings):
     """
     Return the application's metadata info
     """
 
-    title = "dummy_users"
-    description = (
-        "Service to fetch the list of dummy users from 3rd party downstream services"
-    )
-    version = "1.1.3"
-    contact = {
+    title: ClassVar[str] = "dummy_users"
+    description: ClassVar[str] = "Service to fetch the list of dummy users from 3rd party downstream services"
+    version: ClassVar[str] = "1.1.3"
+    contact: ClassVar[dict] = {
         "name": "Ashwin Hegde",
         "url": "https://github.com/hegdeashwin",
         "email": "ashwin.hegde3@gmail.com",

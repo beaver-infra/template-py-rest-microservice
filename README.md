@@ -68,25 +68,29 @@ app/
 export <Name>=<Value>
 
 For example:
-export BEAVER_API_SYS_INS_TYPE="DEVELOPMENT"
+export INSTANCE_ENVIRONMENT="DEVELOPMENT"
 ```
 
 :warning: No space before and after `=` sign.
 
 | Name | Purpose | Possible Values |
 |:---|:---|:---|
-| BEAVER_API_SYS_INS_TYPE | Help to identify system instance type on which the app service is running | `DEVELOPMENT`, `STAGE` and `PRODUCTION` |
+| INSTANCE_ENVIRONMENT | Help to identify system instance type on which the app service is running | `DEVELOPMENT`, `STAGE` and `PRODUCTION` |
 
 ### Development
 
 ```console
-export BEAVER_API_SYS_INS_TYPE="DEVELOPMENT"
+export INSTANCE_ENVIRONMENT="DEVELOPMENT"
 ```
 
 **Install all dependencies using Pip**
 
 ```console
-pip install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip3 install -r requirements.txt
+pip3 install -r requirements-dev.txt
 ```
 
 **Run the service**
@@ -98,7 +102,7 @@ uvicorn "app.main:app" --host="0.0.0.0" --port=8000 --reload
 **Build & Run the service using Docker**
 
 ```console
-docker build -t pyrest .
+docker build -f Dockerfile.dev -t pyrest .
 docker run -d -p 8000:8000 pyrest
 ```
 
@@ -134,7 +138,7 @@ isort **/*.py
 ### Stage
 
 ```console
-export BEAVER_API_SYS_INS_TYPE="STAGE"
+export INSTANCE_ENVIRONMENT="STAGE"
 ```
 
 **Install only dependencies (exclude dev-dependencies) using Poetry**
@@ -157,7 +161,7 @@ http://<STAGE_BASE_URL>:<STAGE_PORT>/api/v1/docss
 ### Production
 
 ```console
-export BEAVER_API_SYS_INS_TYPE="PRODUCTION"
+export INSTANCE_ENVIRONMENT="PRODUCTION"
 ```
 
 **Install only dependencies (exclude dev-dependencies) using Poetry**

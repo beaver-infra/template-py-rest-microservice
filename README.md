@@ -178,7 +178,9 @@ poetry install --no-dev
 **Run the service**
 
 ```console
-uvicorn "app.main:app" --host="<PRODUCTION_HOST_IP>" --port=<PRODUCTION_PORT> --workers 4
+gunicorn app.main:app --workers <NO_OF_WORKERS> --worker-class uvicorn.workers.UvicornWorker --bind <PRODUCTION_HOST_IP>:<PRODUCTION_PORT>
+
+E.g. gunicorn app.main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 127.0.0.1:3000
 ```
 
 **Run the Swagger API Docs**

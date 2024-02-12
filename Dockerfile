@@ -27,4 +27,4 @@ HEALTHCHECK --interval=30s --timeout=30s --start-period=30s \
     CMD curl --fail http://localhost:$SERVER_PORT/api/v1/health || exit 1
 
 # Default command to execute when the container starts
-CMD ["gunicorn", "app.main:app", "--workers", "4", "--worker-class", "uvicorn.workers.UvicornWorker", "--proxy-headers", "--host", "0.0.0.0", "--port", "$SERVER_PORT"]
+CMD gunicorn app.main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 127.0.0.1:3000

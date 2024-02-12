@@ -13,7 +13,7 @@ class Metadata(BaseSettings):
     # Metadata properties
     title: ClassVar[str] = "dummy_users"
     description: ClassVar[str] = "Service to fetch the list of dummy users from 3rd party downstream services"
-    version: ClassVar[str] = "1.1.3"
+    version: ClassVar[str] = "1.1.4"
     contact: ClassVar[dict] = {
         "name": "Ashwin Hegde",
         "url": "https://github.com/hegdeashwin",

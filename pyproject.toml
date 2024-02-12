@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "template-py-rest-microservice"
-version = "1.1.3"
+version = "1.1.4"
 description = "This repository acts like a project template for all Python based microservice built using FastAPI."
 authors = ["Ashwin Hegde <ashwin.hegde3@gmail.com>"]
 maintainers = ["Ashwin Hegde <ashwin.hegde3@gmail.com>"]

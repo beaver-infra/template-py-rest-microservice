@@ -7,3 +7,5 @@ uvicorn
 requests
 httpx
 omegaconf
+gunicorn
+pydantic-settings

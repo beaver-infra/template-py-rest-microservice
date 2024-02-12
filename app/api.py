@@ -1,4 +1,7 @@
-# Import the APIRouter class from the FastAPI framework
+"""
+Import the APIRouter class from the FastAPI framework
+"""
+
 from fastapi import APIRouter
 
 # Import the endpoint routers for health, information, and user functionalities

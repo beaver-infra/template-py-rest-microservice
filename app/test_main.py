@@ -25,7 +25,8 @@ def test_info_api():
     """
     Test the info API endpoint.
 
-    Asserts that the info endpoint returns a status code of 200 and the response title is "dummy_users".
+    Asserts that the info endpoint returns a status code of 200 and
+    the response title is "dummy_users".
     """
     response = client.get("/api/v1/info")
     assert response.status_code == 200

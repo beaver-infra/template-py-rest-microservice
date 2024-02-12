@@ -1,4 +1,7 @@
-# Import necessary modules and packages
+"""
+Import necessary modules and packages
+"""
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware

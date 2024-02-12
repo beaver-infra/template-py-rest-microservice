@@ -1,5 +1,5 @@
 """
-Holds functions used by info API
+Defines endpoints for retrieving microservice information.
 """
 
 from fastapi import APIRouter, Depends, status
@@ -15,6 +15,12 @@ router = APIRouter()
 @version(1)
 async def info(metadata: Metadata = Depends(get_service_metadata)):
     """
-    Return microservice metadata info
+    Retrieve metadata information for the microservice.
+
+    Parameters:
+    - metadata (Metadata): Metadata object containing service information.
+
+    Returns:
+    - dict: Metadata information for the microservice.
     """
     return metadata.get_metadata()

@@ -1,14 +1,16 @@
 """
-Holds all service level configurations
+Contains service level configurations and metadata retrieval methods.
 """
+
 from pydantic_settings import BaseSettings
 from typing import ClassVar
 
 class Metadata(BaseSettings):
     """
-    Return the application's metadata info
+    Represents metadata for the application.
     """
 
+    # Metadata properties
     title: ClassVar[str] = "dummy_users"
     description: ClassVar[str] = "Service to fetch the list of dummy users from 3rd party downstream services"
     version: ClassVar[str] = "1.1.3"
@@ -20,50 +22,51 @@ class Metadata(BaseSettings):
 
     def get_service_title(self):
         """
-        Return title
+        Retrieves the title of the service.
         """
         return self.title
 
     def get_service_description(self):
         """
-        Return description
+        Retrieves the description of the service.
         """
         return self.description
 
     def get_service_release_version(self):
         """
-        Return version
+        Retrieves the release version of the service.
         """
         return self.version
 
     def get_service_contact(self):
         """
-        Return contact
+        Retrieves the contact information of the service.
         """
         return self.contact
 
     def get_hostname(self):
         """
-        Return machine hostname
+        Retrieves the machine hostname.
         """
         return "127.0.0.1"
 
     def get_port(self):
         """
-        Return application server port. This should be unique
-        amoung all the microservice exist for beaver.
+        Retrieves the application server port.
+        
+        This port should be unique among all microservices existing for beaver.
         """
         return 3000
 
     def is_debug_mode(self):
         """
-        Return debug model
+        Determines if the service is in debug mode.
         """
         return True
 
     def get_metadata(self):
         """
-        Return metadata object
+        Retrieves the metadata object of the service.
         """
         return {
             "title": self.title,

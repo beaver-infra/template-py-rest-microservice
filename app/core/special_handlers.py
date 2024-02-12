@@ -1,32 +1,34 @@
 """
-Holds all special handler functions used within services
+Defines special handler functions utilized within services.
 """
-# pylint: disable-all
-from typing import Callable
 
+# Disabling pylint to suppress linting warnings
+# pylint: disable-all
+
+from typing import Callable
 from fastapi import FastAPI
 
 def _startup_event(app: FastAPI) -> None:
     """
-    A function that should be run before the application starts.
-    Your application won't start receiving requests
-    until all the startup event handlers have completed.
+    Execute before the application starts.
+    
+    This function ensures that the application does not start 
+    receiving requests until all startup event handlers have completed.
     """
     pass
-
 
 def _shutdown_event(app: FastAPI) -> None:
     """
-    A function that should be run before the application starts.
-    Your application won't start receiving requests
-    until all the startup event handlers have completed.
+    Execute before the application starts.
+    
+    This function ensures that the application does not start 
+    receiving requests until all shutdown event handlers have completed.
     """
     pass
 
-
 def startup_event_handler(app: FastAPI) -> Callable:
     """
-    A startup event handler wrapper function
+    Wrap function to handle startup events.
     """
 
     def startup() -> None:
@@ -34,10 +36,9 @@ def startup_event_handler(app: FastAPI) -> Callable:
 
     return startup
 
-
 def shutdown_event_handler(app: FastAPI) -> Callable:
     """
-    A shutdown event handler wrapper function
+    Wrap function to handle shutdown events.
     """
 
     def shutdown() -> None:

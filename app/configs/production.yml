@@ -1,6 +1,6 @@
 APP:
     HOSTNAME: 127.0.0.1
-    PORT: 8000
+    PORT: 3000
     DEBUG: True
 
 DOWNSTREAMS:

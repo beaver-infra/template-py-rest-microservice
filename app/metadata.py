@@ -53,7 +53,7 @@ class Metadata(BaseSettings):
         Return application server port. This should be unique
         amoung all the microservice exist for beaver.
         """
-        return 8000
+        return 3000
 
     def is_debug_mode(self):
         """

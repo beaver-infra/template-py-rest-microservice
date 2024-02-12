@@ -11,12 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v1/users",
+					"raw": "http://localhost:3000/api/v1/users",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "3000",
 					"path": [
 						"api",
 						"v1",
@@ -32,12 +32,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v1/health",
+					"raw": "http://localhost:3000/api/v1/health",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "3000",
 					"path": [
 						"api",
 						"v1",
@@ -53,12 +53,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v1/info",
+					"raw": "http://localhost:3000/api/v1/info",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "3000",
 					"path": [
 						"api",
 						"v1",
@@ -74,12 +74,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v1/users/1",
+					"raw": "http://localhost:3000/api/v1/users/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "3000",
 					"path": [
 						"api",
 						"v1",

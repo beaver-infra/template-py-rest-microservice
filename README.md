@@ -96,14 +96,14 @@ pip3 install -r requirements-dev.txt
 **Run the service**
 
 ```console
-uvicorn "app.main:app" --host="0.0.0.0" --port=8000 --reload
+uvicorn "app.main:app" --host="0.0.0.0" --port=3000 --reload
 ```
 
 **Build & Run the service using Docker**
 
 ```console
 docker build -f Dockerfile.dev -t pyrest .
-docker run -d -p 8000:8000 pyrest
+docker run -d -p 3000:3000 pyrest
 ```
 
 **Run the tests**

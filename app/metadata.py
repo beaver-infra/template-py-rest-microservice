@@ -2,8 +2,10 @@
 Contains service level configurations and metadata retrieval methods.
 """
 
-from pydantic_settings import BaseSettings
 from typing import ClassVar
+
+from pydantic_settings import BaseSettings
+
 
 class Metadata(BaseSettings):
     """
@@ -12,7 +14,9 @@ class Metadata(BaseSettings):
 
     # Metadata properties
     title: ClassVar[str] = "dummy_users"
-    description: ClassVar[str] = "Service to fetch the list of dummy users from 3rd party downstream services"
+    description: ClassVar[str] = (
+        "Service to fetch the list of dummy users from 3rd party downstream services"
+    )
     version: ClassVar[str] = "1.1.4"
     contact: ClassVar[dict] = {
         "name": "Ashwin Hegde",
@@ -53,7 +57,7 @@ class Metadata(BaseSettings):
     def get_port(self):
         """
         Retrieves the application server port.
-        
+
         This port should be unique among all microservices existing for beaver.
         """
         return 3000

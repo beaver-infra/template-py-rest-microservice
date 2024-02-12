@@ -1,6 +1,7 @@
 """
 Contains common handler functions utilized across services.
 """
+
 import os
 from functools import lru_cache
 
@@ -13,10 +14,10 @@ from app.metadata import Metadata
 def get_service_metadata():
     """
     Retrieves the Configs class containing the application's metadata information.
-    
+
     Returns:
         Metadata: An instance of the Metadata class.
-    
+
     Notes:
         - `@lru_cache()` decorator is used to cache the result of this function,
           avoiding recomputation upon subsequent calls.
@@ -28,10 +29,10 @@ def get_service_metadata():
 def load_config():
     """
     Loads the configuration based on the system instance type where the service is running.
-    
+
     Returns:
         OmegaConf.DictConfig: The loaded configuration file.
-    
+
     Notes:
         - The environment is determined by the system variable `INSTANCE_ENVIRONMENT`.
         - Configuration files are loaded based on the instance environment:
@@ -41,7 +42,7 @@ def load_config():
     """
     instance_environment = os.getenv("INSTANCE_ENVIRONMENT")
     file = OmegaConf.load("app/configs/development.yml")
-    
+
     if instance_environment == "PRODUCTION":
         file = OmegaConf.load("app/configs/production.yml")
 

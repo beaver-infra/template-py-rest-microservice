@@ -5,11 +5,13 @@ from fastapi.middleware.gzip import GZipMiddleware
 from fastapi_versioning import VersionedFastAPI
 
 from app.api import api_router
-from app.core.special_handlers import shutdown_event_handler, startup_event_handler
+from app.core.special_handlers import (shutdown_event_handler,
+                                       startup_event_handler)
 from app.metadata import Metadata
 
 # Initialize metadata object
 metadata = Metadata()
+
 
 def get_app() -> FastAPI:
     """
@@ -54,6 +56,7 @@ def get_app() -> FastAPI:
     fast_app.add_event_handler("shutdown", shutdown_event_handler(fast_app))
 
     return fast_app
+
 
 # Initialize the FastAPI app
 app = get_app()

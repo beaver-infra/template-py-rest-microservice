@@ -15,6 +15,8 @@ class UserModel(BaseModel):
     """
 
     user_id: Optional[int] = None  # Unique identifier for the user, if available
-    first_name: str = Field(None, title="First name", max_length=50)  # User's first name
+    first_name: str = Field(
+        None, title="First name", max_length=50
+    )  # User's first name
     last_name: str = Field(None, title="Last name", max_length=50)  # User's last name
     email: Optional[str] = None  # User's email address

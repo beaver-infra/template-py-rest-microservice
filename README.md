@@ -19,7 +19,7 @@ Optional
 
 List of features that comes with default template
 
-- [x] Use [FastAPI](https://fastapi.tiangolo.com/) as base framework to build the `REST` microservice.
+- [x] Use [FastAPI](https://fastapi.tiangolo.com/) as base framework to build the `REST` API.
 - [x] Use [Poetry](https://python-poetry.org/docs/) as a tool for dependency management and packaging in Python.
 - [x] Predefined `project scaffolding` like files and directories, event handlings, routers, middlewares etc.
 - [x] Comes with `default configurations` for hostname, port, environment etc. Each of these configuration can be `customize` as per microservice needs.
@@ -110,6 +110,12 @@ docker run -d -p 3000:3000 pyrest
 
 ```console
 pytest
+```
+
+**Run the API Docs**
+
+```
+http://localhost:<PORT>/api/v1/info
 ```
 
 **Run the Swagger API Docs**

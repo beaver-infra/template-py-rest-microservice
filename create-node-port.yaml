@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-node-pod
+spec:
+  type: NodePort
+  ports:
+    - port: 3050 # Use for multi pod communication
+      targetPort: 3000 # Server port. Mapped with containerPort: 3000
+      # Removed then rendomly assigned bwt 30000-32767.
+      # Used as localhost:31515 in browser.
+      # Ideally not used in production
+      nodePort: 31515
+  selector:
+    component: pyrest

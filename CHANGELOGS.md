@@ -15,6 +15,10 @@
 
 ## Changes
 
+**Release 14th Feb 2024 - v1.1.6**
+
+- [x] Add support to create K8s single instance (Minikube) Pod and NodePort Service.
+
 **Release 13th Feb 2024 - v1.1.5**
 
 - [x] Fix docker execution for dev and prod env.

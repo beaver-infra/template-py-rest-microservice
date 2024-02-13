@@ -14,6 +14,7 @@ Required
 Optional
 
 * [Docker](https://www.docker.com/)
+* [K8s single instance on dev](https://minikube.sigs.k8s.io/docs/start/)
 
 ## Features
 
@@ -83,7 +84,7 @@ export INSTANCE_ENVIRONMENT="DEVELOPMENT"
 export INSTANCE_ENVIRONMENT="DEVELOPMENT"
 ```
 
-**Install all dependencies using Pip**
+#### Install all dependencies using Pip
 
 ```console
 python3 -m venv .venv
@@ -99,11 +100,16 @@ pip3 install -r requirements-dev.txt
 uvicorn "app.main:app" --host="0.0.0.0" --port=3000 --reload
 ```
 
-**Build & Run the service using Docker**
+#### Build & Run the service using Docker
 
 ```console
-docker build -f Dockerfile.dev -t pyrest .
-docker run -d -p 3000:3000 pyrest
+docker build -f Dockerfile.dev -t hegdeashwin3/template-py-rest-microservice .
+docker run -d -p 3000:3000 hegdeashwin3/template-py-rest-microservice
+```
+
+```
+docker tag pyrest hegdeashwin3/template-py-rest-microservice:1.1.5
+docker push hegdeashwin3/template-py-rest-microservice:1.1.5
 ```
 
 **Run the tests**
@@ -141,13 +147,35 @@ black app
 isort **/*.py
 ```
 
+#### Build & Run the service using K8s single instance (Minikube)
+
+Setup Minikube
+```console
+brew install minikube
+```
+
+Useful K8s cmds
+```console
+kubectl apply -f create-pod.yaml
+kubectl apply -f create-node-port.yaml
+kubectl get pods
+kubectl get services
+```
+
+Useful Minikube cmds
+```console
+minikube logs
+minikube ip
+minikube dashboard
+```
+
 ### Stage
 
 ```console
 export INSTANCE_ENVIRONMENT="STAGE"
 ```
 
-**Install only dependencies (exclude dev-dependencies) using Poetry**
+#### Install only dependencies (exclude dev-dependencies) using Poetry
 ```console
 poetry install --no-dev
 ```
@@ -170,7 +198,7 @@ http://<STAGE_BASE_URL>:<STAGE_PORT>/api/v1/docss
 export INSTANCE_ENVIRONMENT="PRODUCTION"
 ```
 
-**Install only dependencies (exclude dev-dependencies) using Poetry**
+#### Install only dependencies (exclude dev-dependencies) using Poetry
 ```console
 poetry install --no-dev
 ```

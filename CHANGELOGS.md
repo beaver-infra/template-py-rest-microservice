@@ -18,6 +18,7 @@
 **Release 13th Feb 2024 - v1.1.5**
 
 - [x] Fix docker execution for dev and prod env.
+- [x] Fix docker publish config. Switch from GitHub Container Register to DockerHub.
 
 **Release 12th Feb 2024 - v1.1.4**
 

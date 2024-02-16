@@ -154,15 +154,36 @@ Setup Minikube
 brew install minikube
 ```
 
-Useful K8s cmds
+Start Minikube & Verify status
 ```console
-kubectl apply -f create-pod.yaml
-kubectl apply -f create-node-port.yaml
+minikube start
+minikube status
+```
+
+Create K8s deployment
+```console
+kubectl apply -f k8s-pyrest-deployment.yaml
+kubectl get deployments
 kubectl get pods
+```
+
+Create K8s service
+```console
+kubectl apply -f k8s-pyrest-service.yaml
 kubectl get services
 ```
 
-Useful Minikube cmds
+Do port forwarding
+```console
+kubectl port-forward service/pyrest-service 5000:3050
+```
+
+Run the API on browser
+```console
+http://localhost:5000/api/v1/info
+```
+
+Useful Minikube commands
 ```console
 minikube logs
 minikube ip

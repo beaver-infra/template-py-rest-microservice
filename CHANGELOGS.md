@@ -15,9 +15,9 @@
 
 ## Changes
 
-**Release 14th Feb 2024 - v1.1.6**
+**Release 16th Feb 2024 - v1.1.6**
 
-- [x] Add support to create K8s single instance (Minikube) Pod and NodePort Service.
+- [x] Add configuration to create K8s `Deployment`, `Pods` and `service` on K8s - verified on single instance (Minikube).
 
 **Release 13th Feb 2024 - v1.1.5**
 

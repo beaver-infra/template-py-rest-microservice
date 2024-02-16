@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: pyrest-service  # The name of the service
+spec:
+    type: NodePort  # Expose the service on a port on each node
+    ports:
+        - port: 3050  # Port exposed on the service
+          targetPort: 3000  # Port to which the service is forwarded within the pod
+          # The nodePort is optional. If not specified, a random one in the range 30000-32767 will be assigned.
+          # Accessible externally as localhost:31515 in the browser.
+          # It's typically not recommended for production use.
+          nodePort: 31515  # The port exposed on the nodes
+    selector:
+        app: pyrest  # The label selector to determine which pods will belong to this service

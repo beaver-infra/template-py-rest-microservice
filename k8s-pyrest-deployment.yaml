@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: pyrest-deployment  # Name of the deployment
+spec:
+    replicas: 2  # Number of replicas for the deployment
+    selector:
+        matchLabels:
+            app: pyrest  # Selector label for the application
+    template:
+        metadata:
+            labels:
+                app: pyrest  # Label for the application
+        spec:
+            containers:
+                - name: pyrest  # Name of the container
+                  image: hegdeashwin3/template-py-rest-microservice:1.1.5  # Docker image for the container
+                  ports:
+                    - containerPort: 3000  # Port on which the container listens

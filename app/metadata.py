@@ -17,7 +17,7 @@ class Metadata(BaseSettings):
     description: ClassVar[str] = (
         "Service to fetch the list of dummy users from 3rd party downstream services"
     )
-    version: ClassVar[str] = "1.1.5"
+    version: ClassVar[str] = "1.1.6"
     contact: ClassVar[dict] = {
         "name": "Ashwin Hegde",
         "url": "https://github.com/hegdeashwin",

@@ -26,7 +26,7 @@ List of features that comes with default template
 - [x] Comes with `default configurations` for hostname, port, environment etc. Each of these configuration can be `customize` as per microservice needs.
 - [x] Predefined common `logger` for application logging.
 - [x] Preconfigured special routes `/info` and `/health`.
-- [x] Use `Docker` to make it easy to run the app on container and shift it.
+- [x] Use `Docker` and `Kubernetes aka K8s` to make it easy to run the app on container and shift it.
 - [x] Predefined `GitHub Actions` for workflows for `PyLint` and `CodeQL`.
 
 ## Code Structure
